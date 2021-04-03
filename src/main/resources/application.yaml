@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9094
+      bindings:
+        foo-out:
+          destination: output
+          content-type: application/json
+        bar-in:
+          destination: output
+          content-type: application/json
+        bar-out:
+          destination: input
+          content-type: application/json
+        baz-in:
+          destination: input
+          content-type: application/json
